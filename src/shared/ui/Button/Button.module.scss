@@ -1,0 +1,53 @@
+.button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: bolder;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: white;
+
+}
+
+.primary:hover {
+  background-color: #0056b3;
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: none;
+  font-weight: bolder;
+  padding: 2px;
+}
+
+.ghost {
+  font-size: 0.875rem;
+  font-weight: lighter;
+  padding: 0;
+  background: transparent;
+}
+
+.secondary:hover {
+  color: var(--color-primary);
+}
+
+.icon {
+  background: none;
+  padding: 8px;
+  border: none;
+}
+
+.icon:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 50%;
+}

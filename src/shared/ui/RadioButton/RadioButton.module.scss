@@ -1,0 +1,39 @@
+.radioButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 9999px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  font-size: 16px;
+  color: #333;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.selected {
+  background-color: var(--color-primary);
+  color: white;
+
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  transition: fill 0.2s ease;
+
+}
+
+.label {
+  font-weight: 500;
+  font-size: 0.875rem;
+}

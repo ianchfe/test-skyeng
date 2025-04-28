@@ -1,0 +1,43 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 379px;
+  max-height: 100%;
+  padding: 32px;
+  background-color: white;
+  border-radius: 30px;
+  gap: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.legend {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fieldsetWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.radios {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 6px;
+}
