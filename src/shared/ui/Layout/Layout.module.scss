@@ -14,15 +14,15 @@
   gap: 34px;
   flex: 1 1 0;
   width: 100%;
+  margin: auto;
+  padding-top: 32px;
+  justify-content: start;
+  min-height: 0;
   max-width: var(--main-width);
   @media (max-width: 1229px) {
     padding-left: 20px;
     padding-right: 20px;
   }
-  margin: auto;
-  padding-top: 32px;
-  justify-content: start;
-  min-height: 0;
 }
 
 .contentContainer {

@@ -5,7 +5,7 @@ import {Layout} from "../../shared/ui/Layout";
 
 export const AppRouter = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/test-skyeng">
             <Routes >
                 <Route path="/" element={<Layout />}>
                     <Route index element={<MainPage />} />
