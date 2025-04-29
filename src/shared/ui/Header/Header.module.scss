@@ -1,8 +1,9 @@
 .header {
   display: flex;
-  padding: 16px 32px;
+  padding: 16px 0px;
+  height: 64px;
+  align-items: center;
   background-color: #fff;
-  height: min-content;
 }
 
 .container {
@@ -12,6 +13,7 @@
   align-items: center;
   width: 100%;
   margin: auto;
+  position: relative;
 }
 
 .logo {
@@ -21,7 +23,13 @@
 
 .nav {
   display: flex;
-  gap: 24px;
+  font-size: 1rem;
+  width: 100%;
+  justify-content: center;
+  gap: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 

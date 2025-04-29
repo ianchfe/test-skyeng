@@ -8,30 +8,50 @@
   background-color: white;
   border-radius: 30px;
   gap: 24px;
+  min-width: 200px;
+
+  @media (max-width: 1199px) {
+    flex-shrink: 1;
+    width: auto;
+  }
+
+  @media (max-width: 959px) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (max-width: 959px) {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 719px) {
+    width: 100%;
+    display: flex;
+  }
 }
 
 .legend {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .fieldsetWrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   max-width: 100%;
 }
 
 .fieldset {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
   width: 100%;
 }
 

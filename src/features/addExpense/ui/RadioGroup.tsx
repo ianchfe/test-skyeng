@@ -13,7 +13,7 @@ export const RadioGroup = ({category, setCategory}) => {
 
         <fieldset className={styles.fieldset}>
             <div className={styles.fieldsetWrapper}>
-                <legend className={styles.legend}>Категория</legend>
+                <label className={styles.legend}>Категория</label>
                 <div className={styles.radios}>
                     <RadioButton
                         label="Еда"

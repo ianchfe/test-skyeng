@@ -15,8 +15,12 @@
   flex: 1 1 0;
   width: 100%;
   max-width: var(--main-width);
+  @media (max-width: 1229px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   margin: auto;
-  padding-top: 24px;
+  padding-top: 32px;
   justify-content: start;
   min-height: 0;
 }
@@ -29,6 +33,14 @@
   height: 100%;
   max-height: 100%;
   min-height: 0;
+
+  @media (max-width: 959px) {
+    flex-direction: column;
+
+    height: max-content;
+    max-height: none;
+    min-height: 100%;
+  }
 }
 
 .pageContent {
@@ -38,6 +50,13 @@
   max-height: 100%;
   width: 100%;
   min-height: 0;
+
+  @media (max-width: 959px) {
+    gap: 20px;
+    height: max-content;
+    max-height: none;
+    min-height: 100%;
+  }
 }
 
 .title {

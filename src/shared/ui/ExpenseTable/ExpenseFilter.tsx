@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styles from './ExpenseTable.module.scss'
 import {Button} from "../Button";
 import {useExpenses} from "../../../entities/expense/model/ExprenseContext";
+import {Polygon} from "../../../assets/SVG/Polygon";
 
 export const ExpenseFilters: FC = () => {
     const { sortField, sortDirection, setSort } = useExpenses();
@@ -17,8 +18,7 @@ export const ExpenseFilters: FC = () => {
     };
 
     const renderArrow = (field: 'category' | 'date') => {
-        if (sortField !== field || !sortDirection) return null;
-        return sortDirection === 'asc' ? '↓' : '↑';
+        return  <div className={`${styles.arrow} ${sortDirection === 'asc' ? styles.rotated : ''}`}><Polygon/></div>;
     };
 
     return (
@@ -26,18 +26,22 @@ export const ExpenseFilters: FC = () => {
             <Button
                 type="button"
                 variant={'ghost'}
-                className={`${styles.button} ${sortField === 'category' ? styles.active : ''}`}
+                style={sortField === 'category'? {color: 'var(--color-primary)'}: {color: 'var(--color-text)'}}
                 onClick={() => handleSortClick('category')}
             >
-                Фильтровать по категории {renderArrow('category')}
+                <div className={styles.buttonText}>
+                    <span>Фильтровать по категории</span> {renderArrow('category')}
+                </div>
             </Button>
             <Button
                 type="button"
                 variant={'ghost'}
-                className={`${styles.button} ${sortField === 'date' ? styles.active : ''}`}
+                style={sortField === 'category'? {color: 'var(--color-primary)'}: {color: 'var(--color-text)'}}
                 onClick={() => handleSortClick('date')}
             >
-                Фильтровать по дату {renderArrow('date')}
+                <div className={styles.buttonText}>
+                    <span>Фильтровать по дату</span> {renderArrow('date')}
+                </div>
             </Button>
         </div>
     );

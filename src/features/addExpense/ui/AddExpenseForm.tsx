@@ -46,14 +46,6 @@ export const AddExpenseForm = () => {
                     onChange={(e) => setTitle(e.target.value)}
                 />
 
-                <Input
-                    label={'Сумма'}
-                    placeholder={"Введите сумму"}
-                    type="number"
-                    value={amount}
-                    onChange={(e) => setAmount(Number(e.target.value))}
-                />
-
                 <RadioGroup category={category} setCategory={setCategory}/>
 
                 <DateInput
@@ -63,6 +55,15 @@ export const AddExpenseForm = () => {
                     value={date}
                     onChange={setDate}
                 />
+
+                <Input
+                    label={'Сумма'}
+                    placeholder={"Введите сумму"}
+                    type="number"
+                    value={amount}
+                    onChange={(e) => setAmount(Number(e.target.value))}
+                />
+
                 <Button variant={'primary'} type="submit">Добавить новый расход</Button>
             </form>
         </aside>

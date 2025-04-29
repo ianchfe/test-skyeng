@@ -5,6 +5,7 @@ import {Button} from "../Button";
 import {Change} from "../../../assets/SVG/Change";
 import {Food} from "../../../assets/SVG/Food";
 import {ExpenseFilters} from "./ExpenseFilter";
+import {useExpenses} from "../../../entities/expense/model/ExprenseContext";
 
 interface Expense {
     id: string;
@@ -19,6 +20,8 @@ interface ExpenseTableProps {
 }
 
 export const ExpenseTable = ({ expenses }: ExpenseTableProps) => {
+    const {removeExpense} = useExpenses()
+
     if (expenses.length === 0) {
         return <p className={styles.empty}>Расходов пока нет</p>;
     }
@@ -32,9 +35,9 @@ export const ExpenseTable = ({ expenses }: ExpenseTableProps) => {
             <div className={styles.table}>
                 <div className={styles.rowHeader}>
                     <div>Название</div>
-                    <div>Сумма</div>
                     <div>Категория</div>
                     <div>Дата</div>
+                    <div>Сумма</div>
                     <div></div>
                 </div>
 
@@ -42,12 +45,12 @@ export const ExpenseTable = ({ expenses }: ExpenseTableProps) => {
                 {expenses.map((expense) => (
                     <div className={styles.row} key={expense.id}>
                         <div>{expense.title}</div>
-                        <div>{expense.amount} ₽</div>
                         <div>{categoryNames[expense.category]}</div>
                         <div>{expense.date}</div>
-                        <div>
+                        <div>{expense.amount} ₽</div>
+                        <div className={styles.buttonsContainer}>
                             <Button variant={'icon'} style={{color: '#999'}}><Change/></Button>
-                            <Button variant={'icon'} style={{color: '#999'}}><Food/></Button>
+                            <Button variant={'icon'} style={{color: '#999'}} onClick={() => removeExpense(expense?.id)}><Food/></Button>
                         </div>
                     </div>
                 ))}
