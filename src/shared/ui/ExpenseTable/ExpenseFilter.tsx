@@ -36,7 +36,7 @@ export const ExpenseFilters: FC = () => {
             <Button
                 type="button"
                 variant={'ghost'}
-                style={sortField === 'category'? {color: 'var(--color-primary)'}: {color: 'var(--color-text)'}}
+                style={sortField === 'date'? {color: 'var(--color-primary)'}: {color: 'var(--color-text)'}}
                 onClick={() => handleSortClick('date')}
             >
                 <div className={styles.buttonText}>
